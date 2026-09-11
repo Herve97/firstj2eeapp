@@ -19,11 +19,12 @@ public class firstServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String nom = req.getParameter("nom");
-		PrintWriter out = resp.getWriter();
-		out.println("<html><body>");
-		out.println("<h1>"+nom+"</h1>");
-		out.println("</body>");
+		req.getRequestDispatcher("vue.jsp").forward(req, resp);
+		//String nom = req.getParameter("nom");
+		//PrintWriter out = resp.getWriter();
+		//out.println("<html><body>");
+		//out.println("<h1>"+nom+"</h1>");
+		//out.println("</body>");
 		
 		// TODO Auto-generated method stub
 		//super.doGet(req, resp);
